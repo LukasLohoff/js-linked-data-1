@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSALD</title>
+	</head>
+	<body>
+		<script>
+			function Person(firstName, lastName, age) {
+				this.firstName = firstName;
+				this.lastName = firstName;
+				this.age = age;
+				this.getYearOfBirth = function() {
+					return (2015 - this.age);
+				};
+			}
+
+			function Department(name, employees) {
+				this.name = name;
+				this.employees = employees;
+				this.addNewEmployee = function(newEmployee) {
+					this.employees.push(newEmployee);
+				};
+			}
+
+			var person1 = new Person("John", "Doe", 77);
+			var person2 = new Person("John", "Doe", 66);
+			var person3 = new Person("John", "Doe", 66);
+
+			var department1 = new Department("ifgi", [person1, person2, person3]);
+
+			department1.addNewEmployee(new Person("dude", "", 13));
+			department1.addNewEmployee(new Person("carl", "smith", 29));
+
+			//console.log(department1.employees);
+			console.log(department1.toSource());
+
+			//console.log(person1.lastName);
+			//console.log(person1.getYearOfBirth());
+		</script>
+	</body>
+</html>
+
