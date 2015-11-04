@@ -80,5 +80,45 @@
 			</fieldset>
 		</div>
 		<br/>
+
+		<button id="selectCheckboxes">
+			Select all checkboxes
+		</button>
+
+		<button id="insertText">
+			Add some text
+		</button>
+
+		<br />
+		<button id="fadeOut">
+			Fade out paragraphs
+		</button>
+
+		<button id="hide">
+			Hide input elements
+		</button>
+
+		<script>
+			$(document).ready(function() {
+
+				$("#selectCheckboxes").click(function() {
+					$("input:checkbox").prop('checked', true);
+				});
+
+				$("#insertText").click(function() {
+					$("#language").before("Location on Google maps: <a href='https://goo.gl/maps/zMszK1pKXPC2'>click here</a>");
+				});
+
+				$("#fadeOut").click(function() {
+					$("p", '#txts').fadeOut(5000);
+				});
+
+				$("#hide").click(function() {
+					$(":input").hide();
+				});
+
+			});
+		</script>
+
 	</body>
 </html>

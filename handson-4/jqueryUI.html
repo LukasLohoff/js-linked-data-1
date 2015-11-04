@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<title>JSALD</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	</head>
+	<body>
+		<p>
+			Date:
+			<input type="text" id="datepicker">
+		</p>
+		<button id="done">
+			Done!
+		</button>
+
+		<div id="dialog" title="date alert">
+			<p>
+				No date selected!
+			</p>
+		</div>
+
+		<script>
+			$(function() {
+				$("#datepicker").datepicker();
+			});
+
+			$(function() {
+				$("#dialog").dialog({
+					autoOpen : false
+				});
+			});
+
+			$("#done").click(function(e) {
+				e.preventDefault();
+				if ($("#datepicker").val() == "") {
+					$('#dialog').dialog('open');
+				}
+			});
+		</script>
+	</body>
+</html>
