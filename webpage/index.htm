@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Linked Data: Unemployment in Münster</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<link rel="stylesheet" href="main.css" />
+
+	</head>
+	<body>
+
+		<!-- Header / Navigation -->
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <!-- Menu Icon for mobile devices / small screens -->
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <!-- Title -->
+			  <a class="navbar-brand" href="index.htm">Linked Data: Unemployment in Münster</a>
+			</div>
+			<!-- Menu -->
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.htm">Map</a></li>
+				<li><a href="help.htm">Help</a></li>
+				<li><a href="license.htm">License</a></li>
+				<li><a href="contact.htm">Contact</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Content -->
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-md-4">
+			  
+			  <!-- Warning for Javascript if not active -->
+			    <noscript>
+				<div class="alert alert-warning">
+				  <h4>JavaScript is disabled</h4>
+				  <p>Please enable JavaScript to view the map.</p>
+				</div>
+			    </noscript>
+			   
+			  <div class="well">
+			  
+			    <!-- Year chooser -->
+				<h4>Year: <span id="year">-</span></h4>
+				<div id="year-slider"></div>
+				<br />
+				
+				<!-- Choose the boundaries -->
+				<h4>Boundaries</h4>
+				<ul id="boundaries">
+					<li><input type="radio" name="boundaries" value="districts" id="bound_districts" /> <label for="bound_districts">Districts</label></li>
+					<li><input type="radio" name="boundaries" value="subareas" id="bound_subareas" /> <label for="bound_subareas">Subareas</label></li>
+					<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs" /> <label for="bound_boroughs">Boroughs</label></li>
+				</ul>
+				<br />
+				
+				<!-- Some kind of legend for the map -->
+				<h4>Legend</h4>
+				<ol id="legend">
+					<li id="legend-left">0–7%</li>
+					<li id="legend-middle">7–14%</li>
+					<li id="legend-right">14–22%</li>
+				</ol>
+				<br />
+
+			  </div>
+			  
+			  
+			  <div class="well">
+				<div id="diagram">No data available.</div>			  
+			  </div>
+
+			</div>
+			<div class="col-md-8" id="content">
+				<!-- The map -->
+				<div id="map"></div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Javascript Lazy loading -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="ms-al9.GeoJson"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
