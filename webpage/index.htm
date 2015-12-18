@@ -56,14 +56,30 @@
 					<div class="well">
 
 						<!-- Year chooser -->
-						<h4>Year: <span id="year">-</span></h4>
+						<h4><input type="checkbox" name="active_year" value="1" id="active_year"> Year: <span id="year">-</span></h4>
 						<div id="year-slider"></div>
+
+						<br>
+
+						<!-- Choose the boundaries -->
+						<h4>Criteria</h4>
+
+						<select id="criteria" name="criteria" class="form-control">
+							<option value="" selected="selected">None</option>
+							<optgroup label="Gender">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</optgroup>
+							<option value="age">Age</option>
+							<option value="longtime">Long-Time Unemployment</option>
+							<option value="foreigners">Foreigners</option>
+						</select>
 						<br>
 
 						<!-- Choose the boundaries -->
 						<h4>Boundaries</h4>
 						<ul id="boundaries">
-							<li><input type="radio" name="boundaries" value="districts" id="bound_districts"> <label for="bound_districts">Districts</label></li>
+							<li><input type="radio" name="boundaries" value="districts" id="bound_districts" checked="checked"> <label for="bound_districts">Districts</label></li>
 							<li><input type="radio" name="boundaries" value="subareas" id="bound_subareas"> <label for="bound_subareas">Subareas</label></li>
 							<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs"> <label for="bound_boroughs">Boroughs</label></li>
 						</ul>
@@ -72,9 +88,9 @@
 						<!-- Some kind of legend for the map -->
 						<h4>Legend</h4>
 						<ol id="legend">
-							<li id="legend-left">0–7%</li>
-							<li id="legend-middle">7–14%</li>
-							<li id="legend-right">14–22%</li>
+							<li id="legend-left">0–5%</li>
+							<li id="legend-middle">5–10%</li>
+							<li id="legend-right">10–15%</li>
 						</ol>
 						<br>
 

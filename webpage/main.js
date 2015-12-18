@@ -7,9 +7,19 @@ var yearSliderId = "#year-slider";
 var yearValue = "#year";
 var mapId = "map";
 var diagramId = "#diagram";
+var yearActiveId = "#active_year";
 
 // JS config
 var map;
+
+function updateYear() {
+	if ($(yearActiveId).prop("checked")) {
+		$(yearValue).text($(yearSliderId).slider("value"));
+	}
+	else {
+		$(yearValue).text("All");
+	}
+}
 
 $(function () {
 	// Init map
@@ -21,15 +31,18 @@ $(function () {
 
 	// Init year slider
 	$(yearSliderId).slider({
-		value: 2013,
-		min: 2005,
-		max: 2015,
+		value: 2014,
+		min: 2010,
+		max: 2014,
 		step: 1,
 		slide: function (event, ui) {
 			$(yearValue).text(ui.value);
+			$(yearActiveId).prop("checked", true);
 		}
 	});
-	$(yearValue).text($(yearSliderId).slider("value"));
+	updateYear();
+
+	$(yearActiveId).change(updateYear);
 
 	// Init diagram
 	$(diagramId).highcharts({
@@ -73,3 +86,5 @@ $(function () {
 			}]
 	});
 });
+
+// TODO: Add SPARQL query library

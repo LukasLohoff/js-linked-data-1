@@ -7,9 +7,22 @@
 	width: 100%;
 }
 
+a[name] {
+	text-decoration: none;
+	color: black;
+}
+a[name]:hover {
+	text-decoration: none;
+	color: black;
+}
+
 #diagram {
 	width: 100%;
 	height: 400px;
+}
+
+#criteria, #criteria ul {
+	list-style-type: none;
 }
 
 #legend, #boundaries {
