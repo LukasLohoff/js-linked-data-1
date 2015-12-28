@@ -3,7 +3,7 @@
 }
 
 #map {
-	height: 700px;
+	height: 800px;
 	width: 100%;
 }
 
@@ -18,7 +18,7 @@ a[name]:hover {
 
 #diagram {
 	width: 100%;
-	height: 400px;
+	height: 350px;
 }
 
 #criteria, #criteria ul {
@@ -41,11 +41,15 @@ a[name]:hover {
 	display: list-item;
 }
 #legend-left {
-	border-top: 10px solid green;
+	border-top: 10px solid #006622;
 }
 #legend-middle {
-	border-top: 10px solid orange;
+	border-top: 10px solid #cc7a00;
 }
 #legend-right {
-	border-top: 10px solid red;
+	border-top: 10px solid #cc0000;
+}
+
+#settingsBox br {
+	clear: left;
 }
