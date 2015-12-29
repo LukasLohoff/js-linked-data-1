@@ -56,7 +56,7 @@
 					<div class="well" id="settingsBox">
 
 						<!-- Year chooser -->
-						<h4><input type="checkbox" name="active_year" value="1" id="active_year"> Year: <span id="year">-</span></h4>
+						<h4>Year: <span id="year">-</span></h4>
 						<div id="year-slider"></div>
 
 						<br>
@@ -75,7 +75,7 @@
 								<option value="Between25and55">25 to 55</option>
 								<option value="Olderthan55">Older than 55</option>
 							</optgroup>
-							<option value="Longtime">Long-Time Unemployment</option>
+							<option value="Longtime">Long-Time</option>
 							<option value="Foreign">Foreigners</option>
 						</select>
 						<br>
@@ -85,26 +85,21 @@
 						<ul id="boundaries">
 							<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs" checked="checked"> <label for="bound_boroughs">Boroughs</label></li>
 							<li><input type="radio" name="boundaries" value="districts" id="bound_districts"> <label for="bound_districts">Districts</label></li>
-							<li>&nbsp;</li>
 						</ul>
 						<br>
-						
+
 					</div>
-				
+
 					<div class="well">
 						<!-- Some kind of legend for the map -->
 						<h4>Legend</h4>
 						<ol id="legend">
-							<li id="legend-left">0-99</li>
-							<li id="legend-middle">100-999</li>
-							<li id="legend-right">1000 and above</li>
+							<li id="legend1">0-99</li>
+							<li id="legend2">100-999</li>
+							<li id="legend3">1000 and above</li>
+							<li id="legend4">Unknown</li>
 						</ol>
 						<br>
-					</div>
-
-					<!-- Data diagram -->
-					<div class="well">
-						<div id="diagram">No data available.</div>			  
 					</div>
 
 				</div>

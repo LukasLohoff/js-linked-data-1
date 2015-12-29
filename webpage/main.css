@@ -17,7 +17,7 @@ a[name]:hover {
 }
 
 #diagram {
-	width: 100%;
+	width: 350px;
 	height: 350px;
 }
 
@@ -33,21 +33,31 @@ a[name]:hover {
     list-style: outside none none;
 }
 #legend li, #boundaries li {
-	width: 32%;
+	margin: 0 0 10px 0;
 	float: left;
-	margin: 0 1% 10px 0;
 	white-space: nowrap;
 	text-align: center;
 	display: list-item;
 }
-#legend-left {
+#legend li {
+	margin-right: 1%;
+	width: 24%;
+}
+#boundaries li {
+	margin-right: 1%;
+	width: 49%;
+}
+#legend1 {
 	border-top: 10px solid #006622;
 }
-#legend-middle {
+#legend2 {
 	border-top: 10px solid #cc7a00;
 }
-#legend-right {
+#legend3 {
 	border-top: 10px solid #cc0000;
+}
+#legend4 {
+	border-top: 10px solid #000000;
 }
 
 #settingsBox br {
