@@ -55,7 +55,7 @@ $(function () {
 		step: 1,
 		slide: function (event, ui) {
 			$(yearValueId).text(ui.value);
-			requestMapData();
+			setTimeout(requestMapData, 100);
 		}
 	});
 	$(districtId).change(requestMapData);
@@ -109,7 +109,7 @@ function getCurrentCriteriaName() {
 
 function buildQuerySingleYear() {
 	var yearValue = $(yearSliderId).slider("value");
-	if (yearValue >= minYear && yearValue <= maxYear) {
+	if (yearValue <= minYear && yearValue >= maxYear) {
 		yearValue = maxYear;
 	}
 
