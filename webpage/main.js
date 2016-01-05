@@ -81,13 +81,13 @@ function requestMapData() {
 }
 
 function requestChartData(areaName) {
-	askTripleStore(buildQueryAllYears(areaName), function (data) {
-		updateChart(areaName, data);
+	var criteriaValue = $(criteriaId).val();
+	askTripleStore(buildQueryAllYears(areaName, criteriaValue), function (data) {
+		updateChart(areaName, criteriaValue, data);
 	});
 }
 
-function getCurrentCriteriaName() {
-	var criteriaValue = $(criteriaId).val();
+function getCurrentCriteriaName(criteriaValue) {
 	switch (criteriaValue) {
 		case "Male":
 		case "Female":
@@ -122,10 +122,10 @@ function buildQuerySingleYear() {
 	if (criteriaValue == "Between25and55") {
 		// We need to calculate this from other data
 		sqlValue = "(xsd:integer(?valueTotal)-xsd:integer(?valueYounger)-xsd:integer(?valueOlder) AS ?value)";
-		sqlCriteria = "?id lodcom:hasYoungerthan25Unemployment" + yearValue + " ?valueYounger. ?id lodcom:hasOlderthan55Unemployment" + yearValue + " ?valueOlder. ?id lodcom:hasUnemployment" + yearValue + " ?valueTotal.";
+		sqlCriteria = "OPTIONAL {?id lodcom:hasYoungerthan25Unemployment" + yearValue + " ?valueYounger. ?id lodcom:hasOlderthan55Unemployment" + yearValue + " ?valueOlder. ?id lodcom:hasUnemployment" + yearValue + " ?valueTotal. }.";
 	}
 	else {
-		sqlCriteria = "?id lodcom:has";
+		sqlCriteria = "OPTIONAL { ?id lodcom:has";
 		switch (criteriaValue) {
 			case "Male":
 			case "Female":
@@ -136,9 +136,9 @@ function buildQuerySingleYear() {
 				// Can be added as is
 				sqlCriteria += criteriaValue;
 				break;
-				// default: Nothing to add
+			// default: Nothing to add
 		}
-		sqlCriteria += "Unemployment" + yearValue + " ?value.";
+		sqlCriteria += "Unemployment" + yearValue + " ?value. }.";
 	}
 
 	var query = sqlPrefixes + "\
@@ -153,47 +153,34 @@ function buildQuerySingleYear() {
 	return query;
 }
 
-function buildQueryAllYears(areaName) {
+function buildQueryAllYears(areaName, criteriaValue) {
 	var sqlArea = $(boroughId).prop("checked") ? "dbpedia:borough" : "dbpedia:city_district";
+	var sqlFilter = "";
 
-	var criteriaValue = $(criteriaId).val();
-	var sqlCriteria = [];
-	var sqlValue = [];
-
-	for (var ix in years) {
-		var year = years[ix];
-		if (criteriaValue == "Between25and55") {
-			// We need to calculate this from other data
-			sqlValue.push("(xsd:integer(?" + year + "Total)-xsd:integer(?" + year + "Younger)-xsd:integer(?" + year + "Older) AS ?" + year + ")");
-			sqlCriteria.push("?id lodcom:hasYoungerthan25Unemployment" + year + " ?" + year + "Younger. ?id lodcom:hasOlderthan55Unemployment" + year + " ?" + year + "Older. ?id lodcom:hasUnemployment" + year + " ?" + year + "Total.");
-		}
-		else {
-			var sqlTemp = "?id lodcom:has";
-			switch (criteriaValue) {
-				case "Male":
-				case "Female":
-				case "Longtime":
-				case "Foreign":
-				case "Olderthan55":
-				case "Youngerthan25":
-					// Can be added as is
-					sqlTemp += criteriaValue;
-					break;
-					// default: Nothing to add
-			}
-			sqlTemp += "Unemployment" + year + " ?" + year + ".";
-			sqlCriteria.push(sqlTemp);
-			sqlValue.push("?" + year);
-		}
+	switch (criteriaValue) {
+		case "Between25and55":
+			sqlFilter = 'has(Youngerthan25|Olderthan55|)Unemployment';
+			break;
+		case "Male":
+		case "Female":
+		case "Longtime":
+		case "Foreign":
+		case "Olderthan55":
+		case "Youngerthan25":
+		case "":
+			// Can be added as is
+			sqlFilter = "has" + criteriaValue + "Unemployment";
+			break;
 	}
 
 	var query = sqlPrefixes + "\
-	SELECT DISTINCT " + sqlValue.join(" ") + "\n\
+	SELECT DISTINCT ?key ?value\n\
 	WHERE { GRAPH <http://course.introlinkeddata.org/G1> {\n\
 	   ?id lodcom:TypeofCityDivision " + sqlArea + ".\n\
 	   ?id dc:title \"" + areaName + "\".\n\
-	   " + sqlCriteria.join(" ") + "\n\
-	}}";
+	   ?id ?key ?value.\n\
+		FILTER regex(str(?key), \"" + sqlFilter + "\").\n\
+	}} ORDER BY ?key";
 
 	return query;
 }
@@ -249,20 +236,61 @@ function updateData(data) {
 	updateChart(null);
 }
 
-function updateChart(areaName, data) {
+function fillMissingYears(data) {
+	var dataSeries = [];
+	// Set default values (null) for each year
+	for (var y = minYear; y <= maxYear; y++) {
+		dataSeries.push(null);
+	}
+	for (var i in data) {
+		var key = data[i].key.value;
+		var year = parseInt(key.substr(key.length-4, 4), 10);
+		dataSeries[year - minYear] =  parseInt(data[i].value.value, 10);
+	}
+	return dataSeries;
+}
+
+function updateChart(areaName, criteriaValue, data) {
 	if (areaName == null || !Array.isArray(data.results.bindings)) {
 		$(diagramId).text("No data available.");
 	}
 	else {
 		var dataSeries1 = [];
-		var bindings = data.results.bindings.shift();
-		for (var key in bindings) {
-			if (bindings[key].value) {
-				// We hope that the values are in ascending order, like the query has been created.
-				// Not very elegant, but I dont see a better solution so far and it should work theoretically.
-				dataSeries1.push(parseInt(bindings[key].value, 10));
+		var bindings = data.results.bindings;
+		
+		if (criteriaValue == "Between25and55") {
+			var dataSeriesTotal = [], dataSeriesYounger = [], dataSeriesOlder = [];
+			// Split result set into totals, younger and older
+			for (var i in bindings) {
+				var key = bindings[i].key.value;
+				if (key.indexOf("hasYoungerthan25Unemployment") > -1) {
+					dataSeriesYounger.push(bindings[i]);
+				}
+				else if (key.indexOf("hasOlderthan55Unemployment") > -1) {
+					dataSeriesOlder.push(bindings[i]);
+				}
+				else { // hasUnemployment
+					dataSeriesTotal.push(bindings[i]);
+				}
+			}
+			// Fill each category with null values if needed
+			dataSeriesTotal = fillMissingYears(dataSeriesTotal);
+			dataSeriesYounger = fillMissingYears(dataSeriesYounger);
+			dataSeriesOlder = fillMissingYears(dataSeriesOlder);
+			// Calculate data for each year
+			for (var i = 0; i < years.length; i++) {
+				if (dataSeriesTotal[i] !== null && dataSeriesYounger[i] !== null && dataSeriesOlder[i] !== null) {
+					dataSeries1.push(dataSeriesTotal[i] - dataSeriesYounger[i] - dataSeriesOlder[i]);
+				}
+				else {
+					dataSeries1.push(null);
+				}
 			}
 		}
+		else {
+			dataSeries1 = fillMissingYears(bindings);
+		}
+
 		var yearIndex = $(yearSliderId).slider("value") - minYear;
 		$(diagramId).highcharts({
 			title: {
@@ -270,7 +298,7 @@ function updateChart(areaName, data) {
 				style: { fontSize: '16px' }
 			},
 			subtitle: {
-				text: getCurrentCriteriaName(),
+				text: getCurrentCriteriaName(criteriaValue),
 				style: { fontSize: '13px' }
 			},
 			credits: {
