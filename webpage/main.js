@@ -10,6 +10,9 @@ var diagramId = "#diagram";
 var criteriaId = "#criteria";
 var districtId = "#bound_districts";
 var boroughId = "#bound_boroughs";
+var legend1Id = "#legend1";
+var legend2Id = "#legend2";
+var legend3Id = "#legend3";
 
 // JS config
 var map = null;
@@ -197,10 +200,29 @@ function updateData(data) {
 	// Work with the data
 	var bindings = data.results.bindings;
 	var defaultOptions = map.defaults || {};
+	var minDataValue = Number.MAX_SAFE_INTEGER;
+	var maxDataValue = Number.MIN_SAFE_INTEGER;
+	// Get min/max data
+	for (var row in bindings) {
+		if (bindings[row].value) {
+			var value = parseInt(bindings[row].value.value, 10);
+			if (value < minDataValue) {
+				minDataValue = value;
+			}
+			if (value > maxDataValue) {
+				maxDataValue = value;
+			}
+		}
+	}
+	
+	var border1 = Math.floor(minDataValue + (maxDataValue - minDataValue) / 3);
+	var border2 = Math.ceil(minDataValue + 2 * ((maxDataValue - minDataValue) / 3));
+	updateLegend(minDataValue, border1, border2, maxDataValue);
+	
+	// Insert geometries with data
 	for (var row in bindings) {
 		var value = null;
 		// Get the data
-		var name = bindings[row].name.value;
 		if (bindings[row].value) {
 			value = bindings[row].value.value;
 		}
@@ -213,10 +235,10 @@ function updateData(data) {
 		if (value == null || value < 0) {
 			defaultOptions.color = "#000000";
 		}
-		else if (value < 100) {
+		else if (value <= border1) {
 			defaultOptions.color = "#006622";
 		}
-		else if (value < 1000) {
+		else if (value <= border2) {
 			defaultOptions.color = "#cc7a00";
 		}
 		else {
@@ -225,7 +247,7 @@ function updateData(data) {
 		var obj = wkt.toObject(defaultOptions);
 		// Bind popup with additional data
 		obj.bindPopup(
-				"<div id='diagram' data-name=\"" + name + "\">No chart available so far.</div>",
+				"<div id='diagram' data-name=\"" + bindings[row].name.value + "\">No chart available so far.</div>",
 				{maxWidth: 450}
 		);
 		// Add object to map and feature array (for later removal)
@@ -248,6 +270,12 @@ function fillMissingYears(data) {
 		dataSeries[year - minYear] =  parseInt(data[i].value.value, 10);
 	}
 	return dataSeries;
+}
+
+function updateLegend(min, border1, border2, max) {
+	$(legend1Id).text(min + " - " + border1);
+	$(legend2Id).text((border1 + 1) + " - " + border2);
+	$(legend3Id).text((border2 + 1) + " - " + max);
 }
 
 function updateChart(areaName, criteriaValue, data) {
