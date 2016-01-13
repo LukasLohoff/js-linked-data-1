@@ -1,6 +1,6 @@
 // Map config
-var cityCenter = [51.960942, 7.625891]; // Coords of the city center of Münster
-var zoomLevel = 11; // Initial zoom level of Münster
+var cityCenter = [51.960942, 7.625891]; // Coords of the city center of MÃ¼nster
+var zoomLevel = 11; // Initial zoom level of MÃ¼nster
 
 // HTML config
 var yearSliderId = "#year-slider";
@@ -322,7 +322,7 @@ function updateChart(areaName, criteriaValue, data) {
 		var yearIndex = $(yearSliderId).slider("value") - minYear;
 		$(diagramId).highcharts({
 			title: {
-				text: 'Unemployment in Münster ' + areaName,
+				text: 'Unemployment in MÃ¼nster ' + areaName,
 				style: { fontSize: '16px' }
 			},
 			subtitle: {
@@ -331,7 +331,7 @@ function updateChart(areaName, criteriaValue, data) {
 			},
 			credits: {
 				href: "http://www.muenster.de/stadt/stadtplanung/zahlen.html",
-				text: "Source: Stadt Muenster"
+				text: "Source: Stadt MÃ¼nster"
 			},
 			xAxis: {
 				title: {text: 'Year'},
