@@ -328,6 +328,9 @@ function updateChart(areaName, criteriaValue, data) {
 
 		var yearIndex = $(yearSliderId).slider("value") - minYear;
 		$(diagramId).highcharts({
+			chart: {
+				type: 'column'
+			},
 			title: {
 				text: 'Unemployment in Münster ' + areaName,
 				style: { fontSize: '16px' }
