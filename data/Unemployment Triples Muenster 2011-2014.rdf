@@ -4288,7 +4288,8 @@ lodcom:kinderhaus-west dc:title "Kinderhaus West";
 	lodcom:TypeofCityDivision dbo:city_district.
 lodcom:sprakel dc:title "Sprakel";
 	lodcom:TypeofCityDivision dbo:city_district.
-lodcom:mauritz-ost dc:title "Mauritz Ost".
+lodcom:mauritz-ost dc:title "Mauritz Ost";
+	lodcom:TypeofCityDivision dbo:city_district.
 lodcom:gelmer-dyckburg dc:title "Gelmer Dyckburg";
 	lodcom:TypeofCityDivision dbo:city_district.
 lodcom:handorf dc:title "Handorf";
