@@ -337,7 +337,7 @@ function updateChart(areaName, criteriaValue, data) {
 				title: {text: 'Year'},
 				categories: years,
 				plotBands: [{
-						color: '#FCFCE5',
+						color: '#ffddcc',
 						from: yearIndex - 0.5,
 						to: yearIndex + 0.5,
 					}]
