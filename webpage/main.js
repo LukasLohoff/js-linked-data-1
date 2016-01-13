@@ -1,6 +1,6 @@
 // Map config
-var cityCenter = [51.960942, 7.625891]; // Coords of the city center of MÃ¼nster
-var zoomLevel = 11; // Initial zoom level of MÃ¼nster
+var cityCenter = [51.960942, 7.625891]; // Coords of the city center of Münster
+var zoomLevel = 11; // Initial zoom level of Münster
 
 // HTML config
 var yearSliderId = "#year-slider";
@@ -70,8 +70,8 @@ $(function () {
 });
 
 function askTripleStore(query, callbackSuccess) {
+	console.log(query);
 	var url = sparqlUrl + encodeURIComponent(query); // encodeURI is not enough as it doesn't enocde # for example.
-	console.log(query, url);
 	$.ajax({
 		dataType: "jsonp",
 		url: url,
@@ -322,7 +322,7 @@ function updateChart(areaName, criteriaValue, data) {
 		var yearIndex = $(yearSliderId).slider("value") - minYear;
 		$(diagramId).highcharts({
 			title: {
-				text: 'Unemployment in MÃ¼nster ' + areaName,
+				text: 'Unemployment in Münster ' + areaName,
 				style: { fontSize: '16px' }
 			},
 			subtitle: {
