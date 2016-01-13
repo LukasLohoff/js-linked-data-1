@@ -273,9 +273,16 @@ function fillMissingYears(data) {
 }
 
 function updateLegend(min, border1, border2, max) {
-	$(legend1Id).text(min + " - " + border1);
-	$(legend2Id).text((border1 + 1) + " - " + border2);
-	$(legend3Id).text((border2 + 1) + " - " + max);
+	if (min == Number.MAX_SAFE_INTEGER || max == Number.MIN_SAFE_INTEGER) {
+		$(legend1Id).text("N/A");
+		$(legend2Id).text("N/A");
+		$(legend3Id).text("N/A");
+	}
+	else {
+		$(legend1Id).text(min + " - " + border1);
+		$(legend2Id).text((border1 + 1) + " - " + border2);
+		$(legend3Id).text((border2 + 1) + " - " + max);
+	}
 }
 
 function updateChart(areaName, criteriaValue, data) {
