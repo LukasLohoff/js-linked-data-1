@@ -10,226 +10,271 @@
 lodcom:hasUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Total Unemployment in year 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the total unemployment in a correspondent geographical area in the year 2010"@en.
 
 lodcom:hasUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Total Unemployment in year 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the total unemployment in a correspondent geographical area in the year 2011"@en.
 
 lodcom:hasUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Total Unemployment in year 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the total unemployment in a correspondent geographical area in the year 2012"@en.
 
 lodcom:hasUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Total Unemployment in year 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the total unemployment in a correspondent geographical area in the year 2013"@en.
 
 lodcom:hasUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Total Unemployment in year 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the total unemployment in a correspondent geographical area in the year 2014"@en.
 
 lodcom:hasMaleUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Male Unemployment in year 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the male unemployment in a specific geographical area in the year 2010"@en.
 
 lodcom:hasMaleUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Male Unemployment in year 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the male unemployment in a specific geographical area in the year 2011"@en.
 
 lodcom:hasMaleUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Male Unemployment in year 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the male unemployment in a specific geographical area in the year 2012"@en.
 
 lodcom:hasMaleUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Male Unemployment in year 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the male unemployment in a specific geographical area in the year 2013"@en.
 
 lodcom:hasMaleUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Male Unemployment in year 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the male unemployment in a specific geographical area in the year 2014"@en.
 
 lodcom:hasFemaleUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Female Unemployment in year 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the female unemployment in a specific geographical area in the year 2010"@en.
 
 lodcom:hasFemaleUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Female Unemployment in year 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the female unemployment in a specific geographical area in the year 2011"@en.
 
 lodcom:hasFemaleUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Female Unemployment in year 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the female unemployment in a specific geographical area in the year 2012"@en.
 
 lodcom:hasFemaleUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Female Unemployment in year 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the female unemployment in a specific geographical area in the year 2013"@en.
 
 lodcom:hasFemaleUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Female Unemployment in year 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the female unemployment in a specific geographical area in the year 2014"@en.
 
 lodcom:hasYoungerthan25Unemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people younger than 25 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people younger than 25 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasYoungerthan25Unemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people younger than 25 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people younger than 25 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasYoungerthan25Unemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people younger than 25 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people younger than 25 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasYoungerthan25Unemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people younger than 25 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people younger than 25 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasYoungerthan25Unemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people younger than 25 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people younger than 25 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasOlderthan55Unemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people older than 55 years in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people older than 55 years old in a specific geographical area in the year 2010"@en.
 
 lodcom:hasOlderthan55Unemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people older than 55 years in 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people older than 55 years old in a specific geographical area in the year 2011"@en.
 
 lodcom:hasOlderthan55Unemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people older than 55 years in 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people older than 55 years old in a specific geographical area in the year 2012"@en.
 
 lodcom:hasOlderthan55Unemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people older than 55 years in 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people older than 55 years old in a specific geographical area in the year 2013"@en.
 
 lodcom:hasOlderthan55Unemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Unemployment in  people older than 55 years in 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the unemployment for people older than 55 years old in a specific geographical area in the year 2014"@en.
 
 lodcom:hasLongtimeUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Longtime Unemployment in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the longtime unemployment  in a specific geographical area in the year 2010"@en.
 
 lodcom:hasLongtimeUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Longtime Unemployment in 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the longtime unemployment  in a specific geographical area in the year 2011"@en.
 
 lodcom:hasLongtimeUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Longtime Unemployment in 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the longtime unemployment  in a specific geographical area in the year 2012"@en.
 
 lodcom:hasLongtimeUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Longtime Unemployment in 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the longtime unemployment  in a specific geographical area in the year 2013"@en.
 
 lodcom:hasLongtimeUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Longtime Unemployment in 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the longtime unemployment  in a specific geographical area in the year 2014"@en.
 
 lodcom:hasForeignUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Foreign Unemployment in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the foreign unemployment  in a specific geographical area in the year 2010"@en.
 
 lodcom:hasForeignUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Foreign Unemployment in 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the foreign unemployment  in a specific geographical area in the year 2011"@en.
 
 lodcom:hasForeignUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Foreign Unemployment in 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the foreign unemployment  in a specific geographical area in the year 2012"@en.
 
 lodcom:hasForeignUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Foreign Unemployment in 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the foreign unemployment  in a specific geographical area in the year 2013"@en.
 
 lodcom:hasForeignUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of Foreign Unemployment in 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the foreign unemployment  in a specific geographical area in the year 2014"@en.
 
 lodcom:hasSGBIIIUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBIII Unemployment in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBIII unemployment  in a specific geographical area in the year 2010"@en.
 
 lodcom:hasSGBIIIUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBIII Unemployment in 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBIII unemployment  in a specific geographical area in the year 2011"@en.
 
 lodcom:hasSGBIIIUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBIII Unemployment in 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBIII unemployment  in a specific geographical area in the year 2012"@en.
 
 lodcom:hasSGBIIIUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBIII Unemployment in 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBIII unemployment  in a specific geographical area in the year 2013"@en.
 
 lodcom:hasSGBIIIUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBIII Unemployment in 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBIII unemployment  in a specific geographical area in the year 2014"@en.
 
 lodcom:hasSGBIIUnemployment2010 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBII Unemployment in 2010"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBII unemployment  in a specific geographical area in the year 2010"@en.
 
 lodcom:hasSGBIIUnemployment2011 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBII Unemployment in 2011"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBII unemployment  in a specific geographical area in the year 2011"@en.
 
 lodcom:hasSGBIIUnemployment2012 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBII Unemployment in 2012"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBII unemployment  in a specific geographical area in the year 2012"@en.
 
 lodcom:hasSGBIIUnemployment2013 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBII Unemployment in 2013"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBII unemployment  in a specific geographical area in the year 2013"@en.
 
 lodcom:hasSGBIIUnemployment2014 a rdf:Property;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amount of SGBII Unemployment in 2014"@en;
+	rdfs:range rdfs:Literal;
 	rdfs:comment "It is the Property corresponding to the SGBII unemployment  in a specific geographical area in the year 2014"@en.
 
 #Definition of the Geographical Areas in Muenster
@@ -239,265 +284,221 @@ lodcom:hasSGBIIUnemployment2014 a rdf:Property;
 lodcom:aegidii a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aegidii District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Aegidii district in the city of Muenster,Germany"@en.
 
 lodcom:ueberwasser a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aegidii District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Ueberwasser district in the city of Muenster,Germany"@en.
 
 lodcom:dom a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Dom District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Dom district in the city of Muenster,Germany"@en.
 
 lodcom:buddenturm a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Buddenturm District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Buddenturm district in the city of Muenster,Germany"@en.
 
 lodcom:martini a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Martini District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Martini district in the city of Muenster,Germany"@en.
 
 lodcom:pluggendorf a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Pluggendorf District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Pluggendorf district in the city of Muenster,Germany"@en.
 
 lodcom:josef a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Josef District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Josef district in the city of Muenster,Germany"@en.
 
 lodcom:bahnhof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Bahnhof District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Bahnhof district in the city of Muenster,Germany"@en.
 
 lodcom:hansaplatz a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hansaplatz District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Hansaplatz district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz West District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Mauritz West district in the city of Muenster,Germany"@en.
 
 lodcom:schlachthof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schlachthof District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Schlachthof district in the city of Muenster,Germany"@en.
 
 lodcom:kreuz a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kreuz District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Kreuz district in the city of Muenster,Germany"@en.
 
 lodcom:neutor a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Neutor District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Neutor district in the city of Muenster,Germany"@en.
 
 lodcom:schloss a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schloss District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Schloss district in the city of Muenster,Germany"@en.
 
 lodcom:aaseestadt a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aaseestadt District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Aaseestadt district in the city of Muenster,Germany"@en.
 
 lodcom:geist a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Geist District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Geist district in the city of Muenster,Germany"@en.
 
 lodcom:schuetzenhof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schuetzenhof District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Schuetzenhof district in the city of Muenster,Germany"@en.
 
 lodcom:dueesberg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Dueesberg District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Dueesberg district in the city of Muenster,Germany"@en.
 
 lodcom:hafen a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hafen District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Hafen district in the city of Muenster,Germany"@en.
 
 lodcom:herz-jesu a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Herz Jesu District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Herz Jesu district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-mitte a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz Mitte District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Mauritz Mitte district in the city of Muenster,Germany"@en.
 
 lodcom:rumphorst a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Rumphorst District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Rumphorst district in the city of Muenster,Germany"@en.
 
 lodcom:uppenberg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Uppenberg District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Uppenberg district in the city of Muenster,Germany"@en.
 
 lodcom:gievenbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gievenbeck District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Gievenbeck district in the city of Muenster,Germany"@en.
 
 lodcom:mecklenbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mecklenbeck District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Mecklenbeck district in the city of Muenster,Germany"@en.
 
 lodcom:albachten a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Albachten District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Albachten district in the city of Muenster,Germany"@en.
 
 lodcom:roxel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Roxel District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Roxel district in the city of Muenster,Germany"@en.
 
 lodcom:nienberge a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Nienberge District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Nienberge district in the city of Muenster,Germany"@en.
 
 lodcom:coerde a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Coerde District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Coerde district in the city of Muenster,Germany"@en.
 
 lodcom:kinderhaus-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kinderhaus Ost District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Kinderhaus Ost district in the city of Muenster,Germany"@en.
 
 lodcom:kinderhaus-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kinderhaus West District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Kinderhaus West district in the city of Muenster,Germany"@en.
 
 lodcom:sprakel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Sprakel District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Sprakel district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz Ost District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Mauritz Ost district in the city of Muenster,Germany"@en.
 
 lodcom:gelmer-dyckburg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gelmer Dyckburg District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Gelmer Dyckburg district in the city of Muenster,Germany"@en.
 
 lodcom:handorf a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Handorf District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Handorf district in the city of Muenster,Germany"@en.
 
 lodcom:gremmendorf-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gremmendorf West District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Gremmendorf West district in the city of Muenster,Germany"@en.
 
 lodcom:gremmendorf-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gremmendorf Ost District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Gremmendorf Ost district in the city of Muenster,Germany"@en.
 
 lodcom:angelmodde a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Angelmodde District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Angelmodde district in the city of Muenster,Germany"@en.
 
 lodcom:wolbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Wolbeck District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Wolbeck district in the city of Muenster,Germany"@en.
 
 lodcom:berg_fidel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Berg Fidel District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Berg Fidel district in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup Ost District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Hiltrup Ost district in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-mitte a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup Mitte District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Hiltrup Mittedistrict in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup West District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Hiltrup West district in the city of Muenster,Germany"@en.
 
 lodcom:amelsbueren a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amelsbueren District"@en;
-	rdfs:domain dbo:city_district;
 	rdfs:comment "It corresponds to the Amelsbueren district in the city of Muenster,Germany"@en.
 
 
@@ -530,42 +531,36 @@ lodcom:mitte a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/mitte#>;
 	rdfs:label "Mitte Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Mitte>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the Mitte borough in the city of Muenster,Germany"@en.
 
 lodcom:west a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "West Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-West>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the West borough in the city of Muenster,Germany"@en.
 
 lodcom:nord a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Nord Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Nord>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the Nord borough in the city of Muenster,Germany"@en.
 
 lodcom:ost a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Ost Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Ost>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the Ost borough in the city of Muenster,Germany"@en.
 
 lodcom:suedost a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Suedost Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-S%C3%BCd-Ost>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the Suedost borough in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup a dbo:borough;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup Borough"@en;
 	rdfs:seeAlso <https://de.wikipedia.org/wiki/Hiltrup>;
-	rdfs:domain dbo:borough;
 	rdfs:comment "It corresponds to the Hiltrup borough in the city of Muenster,Germany"@en.
 
 #Definition of the City of Muenster
@@ -574,6 +569,5 @@ lodcom:muenster a dbo:city;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "City of Muenster"@en;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/M%C3%BCnster>;
-	rdfs:domain dbo:city;
 	rdfs:comment "It corresponds to the city of Muenster,Germany"@en.
 
