@@ -59,7 +59,7 @@ a[name]:hover {
 #legend4 {
 	border-top: 10px solid #000000;
 }
-
-#settingsBox br {
-	clear: left;
+.legend-unit {
+	float: right;
+	margin-top: 1em;
 }

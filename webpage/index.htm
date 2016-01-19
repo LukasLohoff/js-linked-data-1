@@ -52,20 +52,24 @@
 						<p>Please enable JavaScript to view the map.</p>
 					</div>
 					</noscript>
+					
+					<div class="alert alert-info" role="alert">
+						To see a timeline of the information, please click on the corresponding boundaries of the districts/boroughs.
+					</div>
 
 					<div class="well" id="settingsBox">
 
 						<!-- Year chooser -->
 						<h4>Year: <span id="year">-</span></h4>
 						<div id="year-slider"></div>
-
-						<br>
+						<br class="clearfix">
 
 						<!-- Choose the criteria -->
 						<h4>Criteria</h4>
-
 						<select id="criteria" name="criteria" class="form-control">
 							<option value="" selected="selected">None</option>
+							<option value="Longtime">Long-Time</option>
+							<option value="Foreign">Foreigners</option>
 							<optgroup label="Gender">
 								<option value="Male">Male</option>
 								<option value="Female">Female</option>
@@ -75,10 +79,8 @@
 								<option value="Between25and55">25 to 55</option>
 								<option value="Olderthan55">Older than 55</option>
 							</optgroup>
-							<option value="Longtime">Long-Time</option>
-							<option value="Foreign">Foreigners</option>
 						</select>
-						<br>
+						<br class="clearfix">
 
 						<!-- Choose the boundaries -->
 						<h4>Boundaries</h4>
@@ -86,21 +88,21 @@
 							<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs" checked="checked"> <label for="bound_boroughs">Boroughs</label></li>
 							<li><input type="radio" name="boundaries" value="districts" id="bound_districts"> <label for="bound_districts">Districts</label></li>
 						</ul>
-						<br>
-
+						<br class="clearfix">
 					</div>
 
 					<div class="well">
 						<!-- Some kind of legend for the map -->
-						<h4>Legend</h4>
+						<small class="legend-unit">in number of unemployed citizens</small>
+						<h4 class="pull-left">Legend</h4>
+						<br class="clearfix">
 						<ol id="legend">
 							<li id="legend1">0-99</li>
 							<li id="legend2">100-999</li>
 							<li id="legend3">1000 and above</li>
 							<li id="legend4">Unknown</li>
 						</ol>
-						<br>
-						<small>To see a timeline of the information, please click on the corresponding boundaries of the districts/boroughs.</small>
+						<br class="clearfix">
 					</div>
 
 				</div>

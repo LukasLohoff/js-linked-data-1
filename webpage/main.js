@@ -244,6 +244,7 @@ function updateData(data) {
 		else {
 			defaultOptions.color = "#cc0000";
 		}
+		defaultOptions.weight = 2;
 		var obj = wkt.toObject(defaultOptions);
 		// Bind popup with additional data
 		obj.bindPopup(
