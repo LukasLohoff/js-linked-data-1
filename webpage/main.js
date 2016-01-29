@@ -13,6 +13,8 @@ var boroughId = "#bound_boroughs";
 var legend1Id = "#legend1";
 var legend2Id = "#legend2";
 var legend3Id = "#legend3";
+var navbarId = "#navbar";
+var dataListIdn = "dataList";
 
 // JS config
 var map = null;
@@ -39,7 +41,10 @@ for (var y = minYear; y <= maxYear; y++) {
 	years.push(y);
 }
 
-// Initializing webpage (onload)
+/**
+ * Initializing the webpage (onload).
+ */
+// 
 $(function () {
 	// Init map
 	map = L.map(mapIdn).setView(cityCenter, zoomLevel);
@@ -74,12 +79,25 @@ $(function () {
 	requestMapData();
 });
 
+/**
+ * Resized the map to fit the current viewport.
+ * 
+ * @returns void
+ */
 function resizeMap() {
 	// Set height to nearly 100%
-	$("#" + mapIdn).height($(window).height() - $("#navbar").height() - 40); // 40 = two times the margin of #navbar
+	$("#" + mapIdn).height($(window).height() - $(navbarId).height() - 40); // 40 = two times the margin of #navbar
 	map.invalidateSize();
 }
 
+/**
+ * Sends the specified SPARQL query to the Triple Store database and after a successful call pass the 
+ * retrieved data to the given callback function.
+ * 
+ * @param string query
+ * @param function callbackSuccess
+ * @returns void
+ */
 function askTripleStore(query, callbackSuccess) {
 	console.log(query);
 	var url = sparqlUrl + encodeURIComponent(query); // encodeURI is not enough as it doesn't enocde # for example.
@@ -90,10 +108,21 @@ function askTripleStore(query, callbackSuccess) {
 	});
 }
 
+/**
+ * Requests the data for the map view and displays it on the web page.
+ * 
+ * @returns {void}
+ */
 function requestMapData() {
 	askTripleStore(buildQuerySingleYear(), updateData);
 }
 
+/**
+ * Requests the data for the chart and shows it on the web page.
+ * 
+ * @param {string} areaName
+ * @returns {void}
+ */
 function requestChartData(areaName) {
 	var criteriaValue = $(criteriaId).val();
 	askTripleStore(buildQueryAllYears(areaName, criteriaValue), function (data) {
@@ -101,12 +130,24 @@ function requestChartData(areaName) {
 	});
 }
 
+/**
+ * Requests the data for the additional information view and shows it on the web page.
+ * 
+ * @param {string} areaName
+ * @returns {void}
+ */
 function requestMoreData(areaName) {
 	askTripleStore(buildQueryMoreData(areaName), function (data) {
 		updateMoreData(areaName, data);
 	});
 }
 
+/**
+ * Gets a human readable title for the specified criteria (see the possible values of the corresponding select field).
+ * 
+ * @param {string} criteriaValue
+ * @returns {string}
+ */
 function getCurrentCriteriaName(criteriaValue) {
 	switch (criteriaValue) {
 		case "Male":
@@ -127,6 +168,11 @@ function getCurrentCriteriaName(criteriaValue) {
 	}
 }
 
+/**
+* Builds the query to retrieve the data for the main map view, which is actually the data for all areas
+* according to the selected criteria, year etc.
+
+ * @returns {string} */
 function buildQuerySingleYear() {
 	var yearValue = $(yearSliderId).slider("value");
 	if (yearValue <= minYear && yearValue >= maxYear) {
@@ -173,6 +219,13 @@ function buildQuerySingleYear() {
 	return query;
 }
 
+/**
+* Builds the query to retrieve the data for the charts, which is actually the data according to the 
+* selected criteria and area, but for all years.
+
+ * @param string areaName
+ * @param string criteriaValue
+ * @returns {string} */
 function buildQueryAllYears(areaName, criteriaValue) {
 	var sqlArea = $(boroughId).prop("checked") ? "dbpedia:borough" : "dbpedia:city_district";
 	var sqlFilter = "";
@@ -205,6 +258,11 @@ function buildQueryAllYears(areaName, criteriaValue) {
 	return query;
 }
 
+/**
+* Builds the query to retrieve the additional data.
+
+ * @param string areaName
+ * @returns {string} */
 function buildQueryMoreData(areaName) {
 	var query = sqlPrefixes + "\
 	SELECT DISTINCT ?value\n\
@@ -215,6 +273,14 @@ function buildQueryMoreData(areaName) {
 	return query;
 }
 
+/**
+* Updates the data on the map.
+* 
+* Removes old layers and adds the boundaries as layers according to the given data received by an AJAX call.
+* Colorizes the boundaries according to the legend and adds a popup for additional data and a charts.
+
+ * @param object data
+ * @returns void */
 function updateData(data) {
 	// Remove old data from map
 	for (var row in features) {
@@ -280,7 +346,7 @@ function updateData(data) {
 			<li role="presentation" id="tab-moredata"><a href="javascript:tab(\'moredata\')">See also...</a></li>\n\
 			</ul>\n\
 			<div id="chart" data-name="' + bindings[row].name.value + '">No chart available so far.</div>\n\
-			<div id="moredata"><h4>References for Münster ' + bindings[row].name.value + '</h4><ul id="dataList"><li>No additional data available so far.</li></ul></div>\n\
+			<div id="moredata"><h4>References for Münster ' + bindings[row].name.value + '</h4><ul id="' + dataListidn + '"><li>No additional data available so far.</li></ul></div>\n\
 			</div>';
 		obj.bindPopup(popupHtml, {maxWidth: 450});
 		// Add object to map and feature array (for later removal)
@@ -291,6 +357,11 @@ function updateData(data) {
 	updateChart(null);
 }
 
+/**
+* Changed the visible tab to the one specified (moredata or chart) and hides the other one.
+
+ * @param  string tab
+ * @returns void */
 function tab(tab) {
 	var activeTab = (tab == 'moredata') ? 'moredata' : 'chart';
 	var inactiveTab = (tab == 'moredata') ? 'chart' : 'moredata';
@@ -302,6 +373,12 @@ function tab(tab) {
 	$("#" + inactiveTab).hide();
 }
 
+/**
+* Checks whether the received data is complete and if not completes the data set.
+* Transforms the given object received by an AJAX call to a more usable array with the correct data types.
+
+ * @param object data
+ * @returns {fillMissingYears.dataSeries|Array} */
 function fillMissingYears(data) {
 	var dataSeries = [];
 	// Set default values (null) for each year
@@ -316,6 +393,14 @@ function fillMissingYears(data) {
 	return dataSeries;
 }
 
+/**
+* Updates the legend with the specified values.
+
+ * @param int min
+ * @param int border1
+ * @param int border2
+ * @param int max
+ * @returns void */
 function updateLegend(min, border1, border2, max) {
 	if (min == Number.MAX_SAFE_INTEGER || max == Number.MIN_SAFE_INTEGER) {
 		$(legend1Id).text("N/A");
@@ -329,8 +414,14 @@ function updateLegend(min, border1, border2, max) {
 	}
 }
 
+/**
+* Builds a list of external links for the current selection using the data received by the AJAX call.
+
+ * @param string areaName
+ * @param object data
+ * @returns void */
 function updateMoreData(areaName, data) {
-	var list = $('#dataList');
+	var list = $('#' + dataListIdn);
 	list.empty();
 	if (areaName == null || !Array.isArray(data.results.bindings) || data.results.bindings.length == 0) {
 		list.append("<li>No additional data available.</li>");
@@ -344,6 +435,13 @@ function updateMoreData(areaName, data) {
 	}
 }
 
+/**
+* Builds the charts using the data received from the AJAX call.
+
+ * @param string areaName
+ * @param {type} criteriaValue
+ * @param object data
+ * @returns void */
 function updateChart(areaName, criteriaValue, data) {
 	if (areaName == null || !Array.isArray(data.results.bindings)) {
 		$(diagramId).text("No data available.");
