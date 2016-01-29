@@ -6,7 +6,7 @@ var zoomLevel = 11; // Initial zoom level of Münster
 var yearSliderId = "#year-slider";
 var yearValueId = "#year";
 var mapIdn = "map";
-var diagramId = "#diagram";
+var diagramId = "#chart";
 var criteriaId = "#criteria";
 var districtId = "#bound_districts";
 var boroughId = "#bound_boroughs";
@@ -30,6 +30,7 @@ prefix dc: <http://purl.org/dc/elements/1.1/>\n\
 prefix geo: <http://www.opengis.net/ont/geosparql#>\n\
 prefix lodcom: <http://vocab.lodcom.de/>\n\
 prefix dbpedia: <http://dbpedia.org/page/classes#>\n\
+prefix rdfs:    <http://www.w3.org/TR/rdf-schema/> \n\
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n";
 
 // Precalculating data
@@ -47,8 +48,12 @@ $(function () {
 	}).addTo(map);
 	// When the popup opens load the chart
 	map.on('popupopen', function () {
-		requestChartData($('#diagram').data('name'));
+		var areaName = $(diagramId).data('name');
+		requestChartData(areaName);
+		requestMoreData(areaName)
 	});
+	resizeMap();
+	$(window).resize(resizeMap);
 
 	// Init year slider
 	$(yearSliderId).slider({
@@ -69,6 +74,12 @@ $(function () {
 	requestMapData();
 });
 
+function resizeMap() {
+	// Set height to nearly 100%
+	$("#" + mapIdn).height($(window).height() - $("#navbar").height() - 40); // 40 = two times the margin of #navbar
+	map.invalidateSize();
+}
+
 function askTripleStore(query, callbackSuccess) {
 	console.log(query);
 	var url = sparqlUrl + encodeURIComponent(query); // encodeURI is not enough as it doesn't enocde # for example.
@@ -87,6 +98,12 @@ function requestChartData(areaName) {
 	var criteriaValue = $(criteriaId).val();
 	askTripleStore(buildQueryAllYears(areaName, criteriaValue), function (data) {
 		updateChart(areaName, criteriaValue, data);
+	});
+}
+
+function requestMoreData(areaName) {
+	askTripleStore(buildQueryMoreData(areaName), function (data) {
+		updateMoreData(areaName, data);
 	});
 }
 
@@ -188,6 +205,16 @@ function buildQueryAllYears(areaName, criteriaValue) {
 	return query;
 }
 
+function buildQueryMoreData(areaName) {
+	var query = sqlPrefixes + "\
+	SELECT DISTINCT ?value\n\
+	WHERE { GRAPH <http://course.introlinkeddata.org/G1> {\n\
+	   ?id dc:title \"" + areaName + "\".\n\
+	   ?id rdfs:seeAlso ?value.\n\
+	}} ORDER BY ?value";
+	return query;
+}
+
 function updateData(data) {
 	// Remove old data from map
 	for (var row in features) {
@@ -247,16 +274,32 @@ function updateData(data) {
 		defaultOptions.weight = 2;
 		var obj = wkt.toObject(defaultOptions);
 		// Bind popup with additional data
-		obj.bindPopup(
-				"<div id='diagram' data-name=\"" + bindings[row].name.value + "\">No chart available so far.</div>",
-				{maxWidth: 450}
-		);
+		var popupHtml = '<div id="mapData">\n\
+			<ul class="nav nav-tabs">\n\
+			<li role="presentation" class="active" id="tab-chart"><a href="javascript:tab(\'chart\')">Chart</a></li>\n\
+			<li role="presentation" id="tab-moredata"><a href="javascript:tab(\'moredata\')">See also...</a></li>\n\
+			</ul>\n\
+			<div id="chart" data-name="' + bindings[row].name.value + '">No chart available so far.</div>\n\
+			<div id="moredata"><h4>References for Münster ' + bindings[row].name.value + '</h4><ul id="dataList"><li>No additional data available so far.</li></ul></div>\n\
+			</div>';
+		obj.bindPopup(popupHtml, {maxWidth: 450});
 		// Add object to map and feature array (for later removal)
 		map.addControl(obj);
 		features.push(obj);
 	}
 
 	updateChart(null);
+}
+
+function tab(tab) {
+	var activeTab = (tab == 'moredata') ? 'moredata' : 'chart';
+	var inactiveTab = (tab == 'moredata') ? 'chart' : 'moredata';
+	
+	$("#tab-" + activeTab).addClass("active");
+	$("#tab-" + inactiveTab).removeClass("active");
+
+	$("#" + activeTab).show();
+	$("#" + inactiveTab).hide();
 }
 
 function fillMissingYears(data) {
@@ -283,6 +326,21 @@ function updateLegend(min, border1, border2, max) {
 		$(legend1Id).text(min + " - " + border1);
 		$(legend2Id).text((border1 + 1) + " - " + border2);
 		$(legend3Id).text((border2 + 1) + " - " + max);
+	}
+}
+
+function updateMoreData(areaName, data) {
+	var list = $('#dataList');
+	list.empty();
+	if (areaName == null || !Array.isArray(data.results.bindings) || data.results.bindings.length == 0) {
+		list.append("<li>No additional data available.</li>");
+	}
+	else {
+		var bindings = data.results.bindings;
+		for (var i in bindings) {
+			var url = bindings[i].value.value;
+			list.append("<li><a href='"+url+"' target='_blank'>"+url+"</a></li>");
+		}
 	}
 }
 
