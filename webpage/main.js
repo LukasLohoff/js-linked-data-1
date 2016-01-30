@@ -15,6 +15,7 @@ var legend2Id = "#legend2";
 var legend3Id = "#legend3";
 var navbarId = "#navbar";
 var dataListIdn = "dataList";
+var helpIntroId = "#helpIntro";
 
 // JS config
 var map = null;
@@ -44,7 +45,7 @@ for (var y = minYear; y <= maxYear; y++) {
 /**
  * Initializing the webpage (onload).
  */
-// 
+//
 $(function () {
 	// Init map
 	map = L.map(mapIdn).setView(cityCenter, zoomLevel);
@@ -74,14 +75,18 @@ $(function () {
 	$(districtId).change(requestMapData);
 	$(boroughId).change(requestMapData);
 	$(criteriaId).change(requestMapData);
-
+	$(helpIntroId).on( "click", function( event ) {
+    event.preventDefault();
+    introJs().start();
+	});
+	
 	$(yearValueId).text($(yearSliderId).slider("value"));
 	requestMapData();
 });
 
 /**
  * Resized the map to fit the current viewport.
- * 
+ *
  * @returns void
  */
 function resizeMap() {
@@ -91,9 +96,9 @@ function resizeMap() {
 }
 
 /**
- * Sends the specified SPARQL query to the Triple Store database and after a successful call pass the 
+ * Sends the specified SPARQL query to the Triple Store database and after a successful call pass the
  * retrieved data to the given callback function.
- * 
+ *
  * @param string query
  * @param function callbackSuccess
  * @returns void
@@ -110,7 +115,7 @@ function askTripleStore(query, callbackSuccess) {
 
 /**
  * Requests the data for the map view and displays it on the web page.
- * 
+ *
  * @returns {void}
  */
 function requestMapData() {
@@ -119,7 +124,7 @@ function requestMapData() {
 
 /**
  * Requests the data for the chart and shows it on the web page.
- * 
+ *
  * @param {string} areaName
  * @returns {void}
  */
@@ -132,7 +137,7 @@ function requestChartData(areaName) {
 
 /**
  * Requests the data for the additional information view and shows it on the web page.
- * 
+ *
  * @param {string} areaName
  * @returns {void}
  */
@@ -144,7 +149,7 @@ function requestMoreData(areaName) {
 
 /**
  * Gets a human readable title for the specified criteria (see the possible values of the corresponding select field).
- * 
+ *
  * @param {string} criteriaValue
  * @returns {string}
  */
@@ -220,7 +225,7 @@ function buildQuerySingleYear() {
 }
 
 /**
-* Builds the query to retrieve the data for the charts, which is actually the data according to the 
+* Builds the query to retrieve the data for the charts, which is actually the data according to the
 * selected criteria and area, but for all years.
 
  * @param string areaName
@@ -275,7 +280,7 @@ function buildQueryMoreData(areaName) {
 
 /**
 * Updates the data on the map.
-* 
+*
 * Removes old layers and adds the boundaries as layers according to the given data received by an AJAX call.
 * Colorizes the boundaries according to the legend and adds a popup for additional data and a charts.
 
@@ -307,11 +312,11 @@ function updateData(data) {
 			}
 		}
 	}
-	
+
 	var border1 = Math.floor(minDataValue + (maxDataValue - minDataValue) / 3);
 	var border2 = Math.ceil(minDataValue + 2 * ((maxDataValue - minDataValue) / 3));
 	updateLegend(minDataValue, border1, border2, maxDataValue);
-	
+
 	// Insert geometries with data
 	for (var row in bindings) {
 		var value = null;
@@ -365,7 +370,7 @@ function updateData(data) {
 function tab(tab) {
 	var activeTab = (tab == 'moredata') ? 'moredata' : 'chart';
 	var inactiveTab = (tab == 'moredata') ? 'chart' : 'moredata';
-	
+
 	$("#tab-" + activeTab).addClass("active");
 	$("#tab-" + inactiveTab).removeClass("active");
 
@@ -449,7 +454,7 @@ function updateChart(areaName, criteriaValue, data) {
 	else {
 		var dataSeries1 = [];
 		var bindings = data.results.bindings;
-		
+
 		if (criteriaValue == "Between25and55") {
 			var dataSeriesTotal = [], dataSeriesYounger = [], dataSeriesOlder = [];
 			// Split result set into totals, younger and older

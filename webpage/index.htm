@@ -10,13 +10,14 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/intro.js/2.0.0/introjs.min.css">
 		<link rel="stylesheet" href="main.css">
 
 	</head>
 	<body>
 
 		<!-- Header / Navigation -->
-		<div class="navbar navbar-default navbar-static-top" id="navbar">
+		<div class="navbar navbar-default navbar-static-top" id="navbar" data-intro='Hello step one!'>
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<!-- Menu Icon for mobile devices / small screens -->
@@ -32,7 +33,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="index.htm">Map</a></li>
-						<li><a href="help.htm">Help</a></li>
+						<li id="helpIntro"><a href="#">Help</a></li>
 						<li><a href="license.htm">License</a></li>
 						<li><a href="contact.htm">Contact</a></li>
 					</ul>
@@ -52,12 +53,12 @@
 						<p>Please enable JavaScript to view the map.</p>
 					</div>
 					</noscript>
-					
+
 					<div class="alert alert-info" role="alert">
 						To see a timeline of the information, please click on the corresponding boundaries of the districts/boroughs.
 					</div>
 
-					<div class="well" id="settingsBox">
+					<div class="well" id="settingsBox" data-intro='Hello step two!' data-position='right'>
 
 						<!-- Year chooser -->
 						<h4>Year: <span id="year">-</span></h4>
@@ -91,7 +92,7 @@
 						<br class="clearfix">
 					</div>
 
-					<div class="well">
+					<div class="well" data-intro='Hello step three!' data-position='right'>
 						<!-- Some kind of legend for the map -->
 						<small class="legend-unit">in number of unemployed citizens</small>
 						<h4 class="pull-left">Legend</h4>
@@ -108,7 +109,7 @@
 				</div>
 				<div class="col-md-8" id="content">
 					<!-- The map -->
-					<div id="map"></div>
+					<div id="map" data-intro='Hello step four!' data-position='left'></div>
 				</div>
 			</div>
 		</div>
@@ -121,6 +122,7 @@
 		<script src="http://arthur-e.github.io/Wicket/wicket.js" type="text/javascript"></script> <!-- Replace this with a proper CDN -->
 		<script src="http://arthur-e.github.io/Wicket/wicket-leaflet.js" type="text/javascript"></script> <!-- Replace this with a proper CDN -->
 		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="https://cdn.jsdelivr.net/intro.js/2.0.0/intro.min.js"></script>
 		<script src="main.js"></script>
 
 	</body>
