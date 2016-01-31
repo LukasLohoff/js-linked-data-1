@@ -87,3 +87,7 @@ a[name]:hover {
 	float: right;
 	margin-top: 1em;
 }
+.introjs-helperNumberLayer {
+    width:  30px;
+    height: 30px;
+}

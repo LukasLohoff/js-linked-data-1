@@ -17,7 +17,7 @@
 	<body>
 
 		<!-- Header / Navigation -->
-		<div class="navbar navbar-default navbar-static-top" id="navbar" data-intro='Hello step one!'>
+		<div class="navbar navbar-default navbar-static-top" id="navbar">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<!-- Menu Icon for mobile devices / small screens -->
@@ -58,41 +58,47 @@
 						To see a timeline of the information, please click on the corresponding boundaries of the districts/boroughs.
 					</div>
 
-					<div class="well" id="settingsBox" data-intro='Hello step two!' data-position='right'>
+					<div class="well" id="settingsBox">
 
 						<!-- Year chooser -->
-						<h4>Year: <span id="year">-</span></h4>
-						<div id="year-slider"></div>
-						<br class="clearfix">
+						<div id="yearSection">
+							<h4>Year: <span id="year">-</span></h4>
+							<div id="year-slider"></div>
+							<br class="clearfix">
+						</div>
 
 						<!-- Choose the criteria -->
-						<h4>Criteria</h4>
-						<select id="criteria" name="criteria" class="form-control">
-							<option value="" selected="selected">None</option>
-							<option value="Longtime">Long-Time</option>
-							<option value="Foreign">Foreigners</option>
-							<optgroup label="Gender">
-								<option value="Male">Male</option>
-								<option value="Female">Female</option>
-							</optgroup>
-							<optgroup label="Age">
-								<option value="Youngerthan25">Younger than 25</option>
-								<option value="Between25and55">25 to 55</option>
-								<option value="Olderthan55">Older than 55</option>
-							</optgroup>
-						</select>
-						<br class="clearfix">
+						<div id="criteriaSection">
+							<h4>Criteria</h4>
+							<select id="criteria" name="criteria" class="form-control">
+								<option value="" selected="selected">None</option>
+								<option value="Longtime">Long-Time</option>
+								<option value="Foreign">Foreigners</option>
+								<optgroup label="Gender">
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</optgroup>
+								<optgroup label="Age">
+									<option value="Youngerthan25">Younger than 25</option>
+									<option value="Between25and55">25 to 55</option>
+									<option value="Olderthan55">Older than 55</option>
+								</optgroup>
+							</select>
+							<br class="clearfix">
+						</div>
 
-						<!-- Choose the boundaries -->
-						<h4>Boundaries</h4>
-						<ul id="boundaries">
-							<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs" checked="checked"> <label for="bound_boroughs">Boroughs</label></li>
-							<li><input type="radio" name="boundaries" value="districts" id="bound_districts"> <label for="bound_districts">Districts</label></li>
-						</ul>
-						<br class="clearfix">
+						<div id=boundarySection>
+							<!-- Choose the boundaries -->
+							<h4>Boundaries</h4>
+							<ul id="boundaries">
+								<li><input type="radio" name="boundaries" value="boroughs" id="bound_boroughs" checked="checked"> <label for="bound_boroughs">Boroughs</label></li>
+								<li><input type="radio" name="boundaries" value="districts" id="bound_districts"> <label for="bound_districts">Districts</label></li>
+							</ul>
+							<br class="clearfix">
+						</div>
 					</div>
 
-					<div class="well" data-intro='Hello step three!' data-position='right'>
+					<div class="well" id="legendBox">
 						<!-- Some kind of legend for the map -->
 						<small class="legend-unit">in number of unemployed citizens</small>
 						<h4 class="pull-left">Legend</h4>
@@ -109,7 +115,7 @@
 				</div>
 				<div class="col-md-8" id="content">
 					<!-- The map -->
-					<div id="map" data-intro='Hello step four!' data-position='left'></div>
+					<div id="map"></div>
 				</div>
 			</div>
 		</div>

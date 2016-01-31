@@ -77,9 +77,9 @@ $(function () {
 	$(criteriaId).change(requestMapData);
 	$(helpIntroId).on( "click", function( event ) {
     event.preventDefault();
-    introJs().start();
+    startIntro();
 	});
-	
+
 	$(yearValueId).text($(yearSliderId).slider("value"));
 	requestMapData();
 });
@@ -524,4 +524,51 @@ function updateChart(areaName, criteriaValue, data) {
 				}]
 		});
 	}
+}
+
+/**
+* Starts the IntroJS tutorial.
+
+	* @returns void */
+function startIntro(){
+	var intro = introJs();
+		intro.setOptions({
+			steps: [
+				{
+					intro: "Welcome! This webpage will help you explore unemployment data in different areas of Münster."
+				},
+				{
+					element: '#settingsBox',
+					intro: "Use this sidebar to customize the data that is displayed on the map.",
+					position: 'right'
+				},
+				{
+					element: '#yearSection',
+					intro: "You can move this slider to get data from 2010 to 2014.",
+					position: 'right'
+				},
+				{
+					element: '#criteriaSection',
+					intro: "Choose a criterion to select a specific group of unemployed.",
+					position: 'right'
+				},
+				{
+					element: '#boundarySection',
+					intro: "You can also switch to districts to get finer granularity.",
+					position: 'right'
+				},
+				{
+					element: '#legendBox',
+					intro: "This legend will tell how many unemployed are represented by each color.",
+					position: 'right'
+				},
+				{
+					element: '#map',
+					intro: "Check the map to view your selected data! You can also click on all boundaries. A popup will show you additional information.",
+					position: 'left'
+				}
+			]
+		});
+
+		intro.start();
 }
