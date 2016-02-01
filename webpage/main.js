@@ -15,7 +15,7 @@ var legend2Id = "#legend2";
 var legend3Id = "#legend3";
 var navbarId = "#navbar";
 var dataListIdn = "dataList";
-var helpIntroId = "#helpIntro";
+var helpButtonId = "#helpButton";
 
 // JS config
 var map = null;
@@ -75,7 +75,7 @@ $(function () {
 	$(districtId).change(requestMapData);
 	$(boroughId).change(requestMapData);
 	$(criteriaId).change(requestMapData);
-	$(helpIntroId).on( "click", function( event ) {
+	$(helpButtonId).on( "click", function( event ) {
     event.preventDefault();
     startIntro();
 	});
@@ -351,7 +351,7 @@ function updateData(data) {
 			<li role="presentation" id="tab-moredata"><a href="javascript:tab(\'moredata\')">See also...</a></li>\n\
 			</ul>\n\
 			<div id="chart" data-name="' + bindings[row].name.value + '">No chart available so far.</div>\n\
-			<div id="moredata"><h4>References for Münster ' + bindings[row].name.value + '</h4><ul id="' + dataListidn + '"><li>No additional data available so far.</li></ul></div>\n\
+			<div id="moredata"><h4>References for Münster ' + bindings[row].name.value + '</h4><ul id="' + dataListIdn + '"><li>No additional data available so far.</li></ul></div>\n\
 			</div>';
 		obj.bindPopup(popupHtml, {maxWidth: 450});
 		// Add object to map and feature array (for later removal)
