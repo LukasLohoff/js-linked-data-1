@@ -571,3 +571,10 @@ lodcom:muenster a dbo:city;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/M%C3%BCnster>;
 	rdfs:comment "It corresponds to the city of Muenster,Germany"@en.
 
+#Definition External data
+
+lodcom:hasUnemployment a rdf:Property;
+	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
+	rdfs:label "Unemployment in Germany"@en;
+	rdfs:range rdfs:Literal;
+	rdfs:comment "It is the Property corresponding to the total unemployment in entire Germany"@en
