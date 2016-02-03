@@ -8,5 +8,7 @@ lodcom:hasUnemployment rdfs:seeAlso <http://www.statista.com/statistics/227005/u
 lodcom:hasUnemployment rdfs:seeAlso <https://ycharts.com/indicators/germany_unemployment_rate/>.
 
 lodcom:hasUnemployment rdfs:seeAlso  <https://www.destatis.de/EN/FactsFigures/NationalEconomyEnvironment/LabourMarket/Employment/TablesLabourForceSurvey/ETQ_1991_2014.html>.
+
 lodcom:hasUnemployment rdfs:seeAlso  <https://statistik.arbeitsagentur.de/Navigation/Statistik/Statistik-nach-Regionen/BA-Gebietsstruktur/Nordrhein-Westfalen-Nav.html?year_month=201512>.
+
 lodcom:hasUnemployment rdfs:seeAlso  <https://datamarket.com/data/set/1unq/unemployment-in-germany#!ds=1unq!1vwx=1:1vwy&display=line>.
