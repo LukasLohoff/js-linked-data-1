@@ -490,7 +490,7 @@ lodcom:coerde a dbo:city_district;
 	rdfs:label "Coerde District"@en;
 	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
 	rdfs:seeAlso <https://www.muenster.de/coerde.html>;
-	rdfs:seeAlso https://de.wikipedia.org/wiki/Coerde>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Coerde>;
 	rdfs:comment "It corresponds to the Coerde district in the city of Muenster,Germany"@en.
 
 lodcom:kinderhaus-ost a dbo:city_district;
