@@ -284,222 +284,331 @@ lodcom:hasSGBIIUnemployment2014 a rdf:Property;
 lodcom:aegidii a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aegidii District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/St._Aegidii_(M%C3%BCnster)>;
 	rdfs:comment "It corresponds to the Aegidii district in the city of Muenster,Germany"@en.
 
 lodcom:ueberwasser a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aegidii District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/%C3%9Cberwasser_(M%C3%BCnster)>;
 	rdfs:comment "It corresponds to the Ueberwasser district in the city of Muenster,Germany"@en.
 
 lodcom:dom a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Dom District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.paulusdom.de/start/>;
 	rdfs:comment "It corresponds to the Dom district in the city of Muenster,Germany"@en.
 
 lodcom:buddenturm a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Buddenturm District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://home.meinestadt.de/muenster-westfalen-buddenturm>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Buddenturm>;
 	rdfs:comment "It corresponds to the Buddenturm district in the city of Muenster,Germany"@en.
 
 lodcom:martini a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Martini District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/St._Martini_(M%C3%BCnster)>;
 	rdfs:comment "It corresponds to the Martini district in the city of Muenster,Germany"@en.
 
 lodcom:pluggendorf a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Pluggendorf District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Pluggendorf>;
 	rdfs:comment "It corresponds to the Pluggendorf district in the city of Muenster,Germany"@en.
 
 lodcom:josef a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Josef District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
 	rdfs:comment "It corresponds to the Josef district in the city of Muenster,Germany"@en.
 
 lodcom:bahnhof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Bahnhof District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster_(Westfalen)_Hauptbahnhof>;
+	rdfs:seeAlso <http://www.muenster.de/stadt/bahnhof.html>;
 	rdfs:comment "It corresponds to the Bahnhof district in the city of Muenster,Germany"@en.
 
 lodcom:hansaplatz a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hansaplatz District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/stadt/buecherei/buecherei-hansaplatz.html>;
 	rdfs:comment "It corresponds to the Hansaplatz district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz West District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,mauritz-west.html>;
+	rdfs:seeAlso <http://home.meinestadt.de/muenster-westfalen-mauritz-west>;
 	rdfs:comment "It corresponds to the Mauritz West district in the city of Muenster,Germany"@en.
 
 lodcom:schlachthof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schlachthof District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Portal:M%C3%BCnster_(Westfalen)/Problemf%C3%A4lle/M%C3%BCnster-Schlachthof>;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
 	rdfs:comment "It corresponds to the Schlachthof district in the city of Muenster,Germany"@en.
 
 lodcom:kreuz a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kreuz District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Heilig-Kreuz-Kirche_(M%C3%BCnster)>;
 	rdfs:comment "It corresponds to the Kreuz district in the city of Muenster,Germany"@en.
 
 lodcom:neutor a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Neutor District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Torh%C3%A4user_am_Neutor>;
 	rdfs:comment "It corresponds to the Neutor district in the city of Muenster,Germany"@en.
 
 lodcom:schloss a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schloss District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/Schloss_M%C3%BCnster>;
 	rdfs:comment "It corresponds to the Schloss district in the city of Muenster,Germany"@en.
 
 lodcom:aaseestadt a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Aaseestadt District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Aaseestadt>;
 	rdfs:comment "It corresponds to the Aaseestadt district in the city of Muenster,Germany"@en.
 
 lodcom:geist a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Geist District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Geistviertel>;
 	rdfs:comment "It corresponds to the Geist district in the city of Muenster,Germany"@en.
 
 lodcom:schuetzenhof a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Schuetzenhof District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+		rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,schuetzenhof.html>;
 	rdfs:comment "It corresponds to the Schuetzenhof district in the city of Muenster,Germany"@en.
 
 lodcom:dueesberg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Dueesberg District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,dueesberg.html>;
 	rdfs:comment "It corresponds to the Dueesberg district in the city of Muenster,Germany"@en.
 
 lodcom:hafen a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hafen District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Hafen_M%C3%BCnster>;
+	rdfs:seeAlso <http://www.muenster.de/stadt/tourismus/sehenswert_hafen.html>;
 	rdfs:comment "It corresponds to the Hafen district in the city of Muenster,Germany"@en.
 
 lodcom:herz-jesu a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Herz Jesu District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Herz-Jesu-Viertel>;
 	rdfs:comment "It corresponds to the Herz Jesu district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-mitte a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz Mitte District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,mauritz-mitte.html>;
 	rdfs:comment "It corresponds to the Mauritz Mitte district in the city of Muenster,Germany"@en.
 
 lodcom:rumphorst a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Rumphorst District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
 	rdfs:comment "It corresponds to the Rumphorst district in the city of Muenster,Germany"@en.
 
 lodcom:uppenberg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Uppenberg District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/M%C3%BCnster-Uppenberg>;
 	rdfs:comment "It corresponds to the Uppenberg district in the city of Muenster,Germany"@en.
 
 lodcom:gievenbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gievenbeck District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Gievenbeck>;
 	rdfs:comment "It corresponds to the Gievenbeck district in the city of Muenster,Germany"@en.
 
 lodcom:mecklenbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mecklenbeck District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Mecklenbeck>;
+	rdfs:seeAlso <https://www.muenster.de/mecklenbeck.html>;
 	rdfs:comment "It corresponds to the Mecklenbeck district in the city of Muenster,Germany"@en.
 
 lodcom:albachten a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Albachten District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Albachten>;
+	rdfs:seeAlso <https://www.muenster.de/albachten.html>;
 	rdfs:comment "It corresponds to the Albachten district in the city of Muenster,Germany"@en.
 
 lodcom:roxel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Roxel District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.roxel.de/006/index.php>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Roxel>;
+	rdfs:seeAlso <https://www.muenster.de/roxel.html>;
 	rdfs:comment "It corresponds to the Roxel district in the city of Muenster,Germany"@en.
 
 lodcom:nienberge a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Nienberge District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/nienberge.html>;
 	rdfs:comment "It corresponds to the Nienberge district in the city of Muenster,Germany"@en.
 
 lodcom:coerde a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Coerde District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/coerde.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Coerde>;
 	rdfs:comment "It corresponds to the Coerde district in the city of Muenster,Germany"@en.
 
 lodcom:kinderhaus-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kinderhaus Ost District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Kinderhaus_(M%C3%BCnster)>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,kinderhaus-ost.html>;
 	rdfs:comment "It corresponds to the Kinderhaus Ost district in the city of Muenster,Germany"@en.
 
 lodcom:kinderhaus-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Kinderhaus West District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/M%C3%BCnster-Kinderhaus>;
 	rdfs:comment "It corresponds to the Kinderhaus West district in the city of Muenster,Germany"@en.
 
 lodcom:sprakel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Sprakel District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/sprakel.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Sprakel>;
 	rdfs:comment "It corresponds to the Sprakel district in the city of Muenster,Germany"@en.
 
 lodcom:mauritz-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Mauritz Ost District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/St._Mauritz>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,mauritz-ost.html>;
 	rdfs:comment "It corresponds to the Mauritz Ost district in the city of Muenster,Germany"@en.
 
 lodcom:gelmer-dyckburg a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gelmer Dyckburg District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Dyckburg>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,gelmer-dyckburg.html>;
 	rdfs:comment "It corresponds to the Gelmer Dyckburg district in the city of Muenster,Germany"@en.
 
 lodcom:handorf a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Handorf District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Handorf_(M%C3%BCnster)>;
+	rdfs:seeAlso <https://www.muenster.de/handorf.html>;
 	rdfs:comment "It corresponds to the Handorf district in the city of Muenster,Germany"@en.
 
 lodcom:gremmendorf-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gremmendorf West District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Gremmendorf>;
 	rdfs:comment "It corresponds to the Gremmendorf West district in the city of Muenster,Germany"@en.
 
 lodcom:gremmendorf-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Gremmendorf Ost District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Gremmendorf>;
 	rdfs:comment "It corresponds to the Gremmendorf Ost district in the city of Muenster,Germany"@en.
 
 lodcom:angelmodde a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Angelmodde District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Angelmodde>;
+	rdfs:seeAlso <https://www.muenster.de/angelmodde.html>;
 	rdfs:comment "It corresponds to the Angelmodde district in the city of Muenster,Germany"@en.
 
 lodcom:wolbeck a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Wolbeck District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Wolbeck_(M%C3%BCnster)>;
+	rdfs:seeAlso <https://www.muenster.de/wolbeck.html>;
 	rdfs:comment "It corresponds to the Wolbeck district in the city of Muenster,Germany"@en.
 
 lodcom:berg_fidel a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Berg Fidel District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/bergfidel.html>;
+	rdfs:seeAlso <http://wiki.muenster.org/index.php/Berg_Fidel>;
 	rdfs:comment "It corresponds to the Berg Fidel district in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-ost a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup Ost District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Hiltrup>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,hiltrup-ost.html>;
 	rdfs:comment "It corresponds to the Hiltrup Ost district in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-mitte a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup Mitte District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Hiltrup>;
 	rdfs:comment "It corresponds to the Hiltrup Mittedistrict in the city of Muenster,Germany"@en.
 
 lodcom:hiltrup-west a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Hiltrup West District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <http://www.immobilienscout24.de/wohnen/nordrhein-westfalen,muenster,hiltrup-west.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Hiltrup>;
 	rdfs:comment "It corresponds to the Hiltrup West district in the city of Muenster,Germany"@en.
 
 lodcom:amelsbueren a dbo:city_district;
 	rdfs:isDefinedBy <http://vocab.lodcom.de/>;
 	rdfs:label "Amelsbueren District"@en;
+	rdfs:seeAlso <http://www.muenster.de/stadtteile.html>;
+	rdfs:seeAlso <https://www.muenster.de/amelsbueren.html>;
+	rdfs:seeAlso <https://de.wikipedia.org/wiki/Amelsb%C3%BCren>;
 	rdfs:comment "It corresponds to the Amelsbueren district in the city of Muenster,Germany"@en.
+
 
 
 #Definition of Muenster Subareas
