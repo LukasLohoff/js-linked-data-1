@@ -564,7 +564,7 @@ function startIntro(){
 				},
 				{
 					element: '#map',
-					intro: "Check the map to view your selected data! You can also click on all boundaries. A popup will show you a timeline of the information and links to additional information.",
+					intro: "Check the map to view your selected data! You can also click on all boundaries. A popup will show you a timeline to compare data of recent years and links to additional information.",
 					position: 'left'
 				}
 			]
