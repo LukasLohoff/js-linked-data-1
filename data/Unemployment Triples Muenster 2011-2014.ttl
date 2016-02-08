@@ -1,8 +1,6 @@
 # Final Project for JavaScript and Linked Data
 
 @prefix dc:  <http://purl.org/dc/elements/1.1/>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/TR/rdf-schema/>.
 @prefix xsd: <http://www.w3.org/TR/xmlschema-2/>.
 @prefix lodcom: <http://vocab.lodcom.de/>.
 @prefix sparel: <http://www.ordnancesurvey.co.uk/docs/ontologies/spatialrelations.owl#>.
